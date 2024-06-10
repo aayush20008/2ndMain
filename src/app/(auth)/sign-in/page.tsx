@@ -19,13 +19,7 @@ function SignIn() {
     const { toast } = useToast();
     const router = useRouter();
     const [isSubmitting, setIsSubmitting] = useState(false);
-    const [identifier, setIdentifier] = useState('');
-    const [password, setPassword] = useState('');
-    const [retypePassword, setRetypePassword] = useState('');
-    const [email, setEmail] = useState('');
-  
-    //zod implementation
-  
+
     const form = useForm< z.infer<typeof signInSchema> >({
       resolver: zodResolver(signInSchema),
       defaultValues: {

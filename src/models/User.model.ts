@@ -1,10 +1,5 @@
 import mongoose, { Document, Schema } from "mongoose";
 
-/***************************************
-                TODO SCHEMA
-****************************************/
-
-
 export interface Todo extends Document {
     _id: mongoose.Types.ObjectId;
     content: string;
@@ -24,12 +19,6 @@ const todoSchema: Schema<Todo>  = new Schema (
         }
     }
 );
-
-
-/***************************************
-                USER SCHEMA
-****************************************/
-
 export interface User extends Document {
     email: string;
     password: string;
